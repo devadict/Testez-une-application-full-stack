@@ -42,5 +42,16 @@ describe('DetailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+  it('should not display the "Participate" button for admin users', () => {
+    const participateButton = fixture.nativeElement.querySelector('button[data-test-id="participate-btn"]');
+    expect(participateButton).toBeFalsy();
+  });
+
+  it('should not display the "Unparticipate" button for admin users', () => {
+    const unparticipateButton = fixture.nativeElement.querySelector('button[data-test-id="unparticipate-btn"]');
+    expect(unparticipateButton).toBeFalsy();
+  });
 });
 
