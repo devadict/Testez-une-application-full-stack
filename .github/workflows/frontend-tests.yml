@@ -26,7 +26,7 @@ jobs:
         run: npm install
       
       - name: Run tests and generate code coverage
-        run: npm test:ci
+        run: jest --ci --coverage
         working-directory: front
 
       - name: Upload Karma report artifact
